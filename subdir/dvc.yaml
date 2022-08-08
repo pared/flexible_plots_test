@@ -1,0 +1,40 @@
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - train.py
+    params:
+    - some_param
+    outs:
+    - confusion_matrix2.json:
+        cache: false
+    - res2.json:
+        cache: false
+    metrics:
+    - metric1.json:
+        cache: false
+    - metric2.json:
+        cache: false
+    plots:
+    - confusion_matrix.json:
+        cache: false
+        template: confusion
+        x: actual
+        y: predicted
+    - res1.json:
+        cache: false
+        template: scatter
+        x: x
+        y: y
+plots:
+  res2.json:
+    template: simple
+  combined:
+    x: x
+    y:
+      res1.json: y
+      res2.json: z
+  confusion_matrix2.json:
+    template: confusion
+    x: actual
+    y: predicted

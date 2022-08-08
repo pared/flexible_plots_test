@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: 6e86be3da192b24a2a9ab262e70a25f1
+      size: 1063
+    params:
+      params.yaml:
+        some_param: 0.1
+    outs:
+    - path: confusion_matrix.json
+      md5: 056bafb48d50795c922563349bfe0957
+      size: 279
+    - path: confusion_matrix2.json
+      md5: 056bafb48d50795c922563349bfe0957
+      size: 279
+    - path: metric1.json
+      md5: 3ad29236d101858f425b8dd72082a084
+      size: 19
+    - path: metric2.json
+      md5: fb1762a00adf8df1f5733c2ccbc0992d
+      size: 19
+    - path: res1.json
+      md5: 47daaff8977eb830a89c70e4ebacb747
+      size: 247
+    - path: res2.json
+      md5: 095e128ec2b71615f2f3623f35dee277
+      size: 246
