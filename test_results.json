@@ -1,1 +1,1 @@
-[{"x_value": 1, "accuracy": 0.2, "other_metric_test": 0.1}, {"x_value": 2, "accuracy": 0.4, "other_metric_test": 0.2}, {"x_value": 3, "accuracy": 0.6000000000000001, "other_metric_test": 0.30000000000000004}]
+[{"x_value": 1, "accuracy": 1.8, "other_metric_test": 0.9}, {"x_value": 2, "accuracy": 3.6, "other_metric_test": 1.8}, {"x_value": 3, "accuracy": 5.4, "other_metric_test": 2.7}]

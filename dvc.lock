@@ -8,11 +8,11 @@ stages:
       size: 551
     params:
       params.yaml:
-        some_param: 0.1
+        some_param: 0.9
     outs:
     - path: test_results.json
-      md5: 5c5b34e4f50a65601ab75ee5de2e3a72
-      size: 208
+      md5: 5f27f20526526c034d0c9786852908b8
+      size: 177
     - path: train_results.json
-      md5: ebfa3db0478047e2d3c3e62bee21082c
-      size: 213
+      md5: 3ff2f764ae95323fabf38895407b8fe1
+      size: 182
