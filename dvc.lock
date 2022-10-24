@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: 3d23f860bafbfc1814416447dcf6b00f
+      size: 551
+    params:
+      params.yaml:
+        some_param: 0.1
+    outs:
+    - path: test_results.json
+      md5: 5c5b34e4f50a65601ab75ee5de2e3a72
+      size: 208
+    - path: train_results.json
+      md5: ebfa3db0478047e2d3c3e62bee21082c
+      size: 213

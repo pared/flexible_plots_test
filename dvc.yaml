@@ -1,0 +1,34 @@
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - train.py
+    params:
+    - some_param
+    outs:
+    - test_results.json:
+        cache: false
+    plots:
+    - train_results.json:
+        cache: false
+        template: scatter
+        x: x_value
+        y: accuracy
+plots:
+  test_results.json:
+    title: default
+  combined_differenent_filename_different_field:
+    x: x_value
+    y:
+      train_results.json: other_metric_train
+      test_results.json: other_metric_test
+  combined_same_field:
+    x: x_value
+    y:
+      train_results.json: accuracy
+      test_results.json: accuracy
+  combined_same_file:
+    x: x_value
+    y:
+      train_results.json: [accuracy, other_metric_train]
+
